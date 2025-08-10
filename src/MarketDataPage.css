@@ -1,0 +1,71 @@
+.market-data {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.heading {
+  text-align: center;
+  color: #1a202c;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.currency-selector {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.currency-selector label {
+  font-weight: 500;
+  color: #333;
+}
+
+.currency-selector select {
+  margin-left: 0.5rem;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.rate-box {
+  text-align: center;
+  margin-bottom: 2rem;
+  background-color: #e7f4e4;
+  padding: 1rem;
+  border-radius: 10px;
+  border-left: 6px solid #4caf50;
+}
+
+.rate-box h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #2e7d32;
+}
+
+.chart-container {
+  margin-top: 1rem;
+}
+
+.admin-nav {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.admin-nav a {
+  text-decoration: none;
+  color: #4caf50;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.admin-nav a:hover {
+  color: #388e3c;
+}

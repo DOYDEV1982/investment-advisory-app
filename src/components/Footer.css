@@ -1,0 +1,46 @@
+.copy {
+  background-color: #1a1a1a;
+  color: #f1f1f1;
+  text-align: center;
+  padding: 30px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-top: 2px solid #4caf50;
+}
+
+.copy p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.socialmedia {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.socialmedia a {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 15px;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.socialmedia a:hover {
+  background-color: #4caf50;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 2px 6px rgba(76, 175, 80, 0.3);
+}
+
+@media (max-width: 600px) {
+  .socialmedia {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
