@@ -1,6 +1,5 @@
-import React, { useEffect} from 'react'
-import { useState } from 'react'
-import './Watchlist.css'
+import { useState, useEffect} from 'react'
+import '../WatchlistPage.css'
 
 
 
@@ -42,9 +41,9 @@ const WatchlistPage = () => {
       {isError && <p>Error loading watchlist.</p>}
     <div className="watchlist-page">
       <h2>Currency Watchlist</h2>
-      {loading ? <p>Loading rates...</p> : (
+      {isLoading ? <p>Loading rates...</p> : (
         <ul className="watchlist-items">
-          {watchlist.map((item, index) => (
+          {watchList.map((item, index) => (
             <li key={index}>
               {item.currency}: {item.trend}
             </li>

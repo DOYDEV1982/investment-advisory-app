@@ -1,6 +1,5 @@
-import React from 'react';
 import Navbar from '../components/Navbar'
-import './AdvisoryPage.css';
+import '../AdvisoryPage.css';
 
 const AdvisoryPage = () => {
   return (

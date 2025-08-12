@@ -1,6 +1,6 @@
 import Navbar from '../components/Navbar'
 import Doydev from '../assets/doydev.png'
-import './AboutPage.css'
+import '../AboutPage.css'
 
 const AboutPage = () => {
   return (

@@ -1,13 +1,11 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import React, { useState } from 'react'
 import Navbar from '../components/Navbar'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 import Footer from '../components/Footer'
 import '../AdminPage.css'
 
 const AdminPage = () => {
 
-  const navigate = useState();
+  const navigate = useNavigate();
 
   const handleLogout = () => {
     localStorage.removeItem('isAuthenticated');

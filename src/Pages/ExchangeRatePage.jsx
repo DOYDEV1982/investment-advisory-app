@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
-import React, { useState } from "react";
+import {useState,  useEffect } from "react";
 import Navbar from '../components/Navbar'
-import "./ExchangeRatePage.css";
+import "../ExchangeRatePage.css";
 
 const ExchangeRatePage = () => {
   

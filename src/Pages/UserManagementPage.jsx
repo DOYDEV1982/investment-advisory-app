@@ -1,8 +1,7 @@
-import React, { useEffect} from 'react'
+import { useState , useEffect} from 'react'
 import { Link } from "react-router-dom"
-import { useState } from 'react'
 import Navbar from '../components/Navbar'
-import '../Pages/'
+import '../UserManagementPage.css'
 
    
 

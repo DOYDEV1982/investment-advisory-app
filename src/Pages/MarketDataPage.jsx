@@ -1,14 +1,8 @@
-import React from 'react';
-import React, { useEffect, useState } from 'react';
-import './MarketDataPage.css';
+import  { useEffect, useState } from 'react';
+import '../MarketDataPage.css';
 
 const MarketDataPage = () => {
-  return (
-    <div className="market-data">
-      <h2>Market Data Overview</h2>
-      <p>Live prices, trends, and currency exchange rates from different global markets.</p>
-     </div>
-  )};
+
   const [rates, setRates] = useState({});
   const [loading, setLoading] = useState(true);
 
@@ -38,6 +32,7 @@ const MarketDataPage = () => {
     </div>
   );
 
+}
 
 export default MarketDataPage;
     
