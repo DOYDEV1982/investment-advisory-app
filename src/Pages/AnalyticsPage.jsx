@@ -7,9 +7,11 @@ const AnalyticsPage = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
 
+  const API_KEY = "";
+
   useEffect(() => {
     // If no API key yet, skip fetching and show placeholder data
-    const API_KEY = process.env.REACT_APP_ALPHA_API_KEY; 
+
     
     if (!API_KEY) {
       console.warn("No API key found. Using placeholder data.");

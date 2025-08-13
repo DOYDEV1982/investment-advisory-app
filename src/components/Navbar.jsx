@@ -22,7 +22,7 @@ const Navbar = () => {
         <Link to="/market-data">Market Data</Link>
         <Link to="/advisory">Advisory</Link>
         <Link to="/watch-list">Watch List</Link>
-        <Link to="/user-management">User Management</Link>
+        <Link to="/user-usermanagement">User Management</Link>
         <Link to="/profile">Profile</Link>
       </nav>
       </div>
