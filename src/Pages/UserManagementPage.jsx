@@ -47,14 +47,14 @@ const UserManagementPage = () => {
       <Navbar />
       <div className="user-management">
         <div className="admin-nav">
-          <Link to="/adminPage">⬅ Back to AdminPage</Link>
-          <Link to="/marketdata" className="nav-link">
+          <Link to="/exchange-rate">⬅ Back to AdminPage</Link>
+          <Link to="/market-data" className="nav-link"> 
             MarketData
           </Link>
-          <Link to="/analytics" className="nav-link">
+          <Link to="/advisory" className="nav-link">
             AnalyticsPage
           </Link>
-          <Link to="/watchlist" className="nav-link">
+          <Link to="/profile" className="nav-link">
             WatchlistPage
           </Link>
         </div>

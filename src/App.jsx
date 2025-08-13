@@ -19,7 +19,7 @@ function App()  {
             <Route path="/analytics" element={<AnalyticsPage />} />
             <Route path="/exchange-rate" element={<ExchangeRatePage />} />
             <Route path="/market-data" element={<MarketDataPage />} />
-            <Route path="/advisory" element={<AdvisoryPage />} />
+            <Route path="/advisory" element={<AdvisoryPage />} /> 
             <Route path="/watch-list" element={<WatchListPage />} />
             <Route path="/user-usermanagement" element={<UserManagementPage />} />
             <Route path="/profile" element={<ProfilePage />} />
