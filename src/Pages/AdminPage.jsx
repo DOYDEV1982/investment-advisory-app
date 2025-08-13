@@ -1,5 +1,5 @@
 import Navbar from '../components/Navbar'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import Footer from '../components/Footer'
 import '../AdminPage.css'
 
