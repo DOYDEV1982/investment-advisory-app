@@ -1,16 +1,15 @@
 .admin-container {
-  padding: 2rem;
-  background: #f4f6f9;
-  min-height: 100vh;
-  font-family: 'Segoe UI', sans-serif;
+  
+  background: linear-gradient(to right, #0A192F, #00B4D8);
+  padding: 15px 40px;
 }
 
+
 .home {
-  padding: 40px;
-  text-align: center;
-  background: linear-gradient(120deg, #e0f7fa, #ffffff);
-  color: #333;
-  min-height: 100vh;
+  color: white;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: 0.3s ease;
 }
 
 .home h1 {
@@ -47,7 +46,7 @@
 }
 
 .admin-header button:hover {
-  background: #d32f2f;
+  border-bottom: 2px solid #90E0EF;
 }
 
 .admin-main {
@@ -58,15 +57,16 @@
 }
 
 .admin-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
+  background: linear-gradient(135deg, #E0F7FA, #FFFFFF);
+  padding: 60px;
+  text-align: center;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .admin-card h2 {
-  margin-bottom: 1rem;
-  color: #2c5364;
+  color: #0077B6;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
 .admin-card button {
@@ -81,7 +81,7 @@
 }
 
 .admin-card button:hover {
-  background: #1e2e40;
+  color: #90E0EF;
 }
 
 .admin-dashboard {
@@ -93,9 +93,9 @@
 }
 
 .admin-dashboard h1 {
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #2c3e50;
+  color: #495057;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
 }
 
 .admin-options {
@@ -115,7 +115,10 @@
 }
 
 .admin-card:hover {
-  background-color: #e0f7e9;
-  transform: translateY(-4px);
-  border-color: #4caf50;
+  background-color: #0077B6;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }

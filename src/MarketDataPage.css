@@ -5,7 +5,7 @@
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   font-family: 'Segoe UI', sans-serif;
-  color: #00f0ff;
+  color: black;
   font-weight: bold;
 }
 
@@ -27,7 +27,7 @@
 
 .currency-selector label {
   font-weight: 500;
-  color: #333;
+
 }
 
 .currency-selector select {
@@ -50,7 +50,7 @@
 .rate-box h3 {
   margin: 0;
   font-size: 1.3rem;
-  color: #2e7d32;
+  
 }
 
 .chart-container {
@@ -64,7 +64,6 @@
 
 .admin-nav a {
   text-decoration: none;
-  color: #4caf50;
   font-weight: bold;
   transition: color 0.3s ease;
 }

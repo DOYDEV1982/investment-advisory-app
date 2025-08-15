@@ -7,9 +7,11 @@ const WatchlistPage = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
 
+  let apikey='9XiDt6ct1mTGMIhVEFuOgUGFV6CxZDJZ'
+  
   useEffect(() => {
     // Use a CORS proxy for development (replace with actual API in production if CORS is allowed)
-    const apiUrl = 'https://cors-anywhere.herokuapp.com/https://financialmodelingprep.com/api/v3/search?query=AA&apikey=9XiDt6ct1mTGMIhVEFuOgUGFV6CxZDJZ';
+    const apiUrl = 'https://financialmodelingprep.com/stable/search-symbol?query=AAPL&apikey=9XiDt6ct1mTGMIhVEFuOgUGFV6CxZDJZ';
 
     fetch(apiUrl)
       .then(response => {
