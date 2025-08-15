@@ -10,7 +10,7 @@ const ExchangeRatePage = () => {
   const [rate, setRate] = useState(null);
 
   useEffect(() => {
-    fetch("https://v6.exchangerate-api.com/v6/YOUR_API_KEY/latest/${fromCurrency")
+    fetch("https://v6.exchangerate-api.com/v6/abbc5fefb2289fd29713455a/latest/USD")
       .then((res) => res.json())
       .then((data) => {
         setCurrencies(Object.keys(data.conversion_rates));

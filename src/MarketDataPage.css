@@ -2,11 +2,14 @@
   max-width: 900px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   font-family: 'Segoe UI', sans-serif;
+  color: #00f0ff;
+  font-weight: bold;
 }
+
+
 
 .heading {
   text-align: center;

@@ -14,9 +14,10 @@ const Navbar = () => {
       <img src= {Doydev} alt="Logo" />
       </div>
     <div className="navbar">
-      <h2 className="navbar-title">AdvisoryApp</h2>
+      <h2 className="navbar-title">Investment Advisory App</h2>
       <nav className="navbar-nav">
         <Link to="/" end>Dashboard</Link>
+        <Link to="/about">About</Link>
         <Link to="/analytics">Analytics</Link>
         <Link to="/exchange-rate">Exchange Rate</Link>
         <Link to="/market-data">Market Data</Link>

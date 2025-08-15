@@ -19,7 +19,7 @@ const ProfilePage = () => {
       return;
     }
 
-    // Validation: username > 8 chars, password < 8 chars, and email missing '@'
+    
     if (username.length > 8 && password.length < 8 && email.indexOf('@') === -1) {
       localStorage.setItem('isAuthenticated', 'true');
       navigate('/admin');
@@ -27,13 +27,13 @@ const ProfilePage = () => {
       alert('Invalid credentials!');
     }
 
-    // Add user to list
+    
     setUsers((prev) => [
       ...prev,
       { id: prev.length + 1, name: username, email, password },
     ]);
 
-    // Reset form fields
+    
     setUserName('');
     setEmail('');
     setPassword('');
@@ -77,7 +77,7 @@ const ProfilePage = () => {
           <button type="submit">Login</button>
         </form>
 
-        {/* Display saved users */}
+        
         <ul>
           {users.map((item) => (
             <li key={item.id} style={{ marginBottom: '10px' }}>

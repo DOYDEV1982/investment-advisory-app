@@ -10,7 +10,7 @@ const UserManagementPage = () => {
   const [feedback, setFeedback] = useState("");
 
   useEffect(() => {
-    // Load users from localStorage
+    
     const storedUsers = JSON.parse(localStorage.getItem("users")) || [];
     setUsers(storedUsers);
   }, []);
@@ -47,7 +47,10 @@ const UserManagementPage = () => {
       <Navbar />
       <div className="user-management">
         <div className="admin-nav">
-          <Link to="/exchange-rate">⬅ Back to AdminPage</Link>
+          
+          <Link to="/exchange-rate" className="nav-link">
+           Exchange Rate
+           </Link>
           <Link to="/market-data" className="nav-link"> 
             MarketData
           </Link>

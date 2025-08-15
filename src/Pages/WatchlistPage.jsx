@@ -1,61 +1,55 @@
-import { useState, useEffect} from 'react'
-import '../WatchlistPage.css'
-
-
+import { useState, useEffect } from 'react';
+import Navbar from '../components/Navbar';
+import '../WatchlistPage.css';
 
 const WatchlistPage = () => {
-
   const [watchList, setWatchList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
 
-
   useEffect(() => {
+    // Use a CORS proxy for development (replace with actual API in production if CORS is allowed)
+    const apiUrl = 'https://cors-anywhere.herokuapp.com/https://financialmodelingprep.com/api/v3/search?query=AA&apikey=9XiDt6ct1mTGMIhVEFuOgUGFV6CxZDJZ';
 
-     fetch('https://financialmodelingprep.com/developer/docs/')
-      .then(response => response.json())
-      .then(data => setWatchList(data))
-      .catch(Error => {
-        console.error('Error fetching watch:`, error');
+    fetch(apiUrl)
+      .then(response => {
+        if (!response.ok) throw new Error('Network response was not ok');
+        return response.json();
+      })
+      .then(data => {
+        console.log(data); // Log to inspect the API response
+        setWatchList(data);
+      })
+      .catch(error => {
+        console.error('Error fetching watchlist:', error);
         setIsError(true);
       })
-
       .finally(() => setIsLoading(false));
-      
+  }, []); // Fixed dependency array
 
-      }, );
-      
-        
   return (
-    <div className="watchlist-page">
-      <h2>Currency Watchlist</h2>
-      {isLoading ? <p>Loading rates...</p> : (
-        <ul className="watchlist-items">
-          {Object.entries(watchList.rates || {}).map(([currency, rate]) => (
-            <li key={currency}>
-              {currency}: {rate}
-            </li>
-          ))}
-        </ul>
-      )}
-      {isError && <p>Error loading watchlist.</p>}
-    <div className="watchlist-page">
-      <h2>Currency Watchlist</h2>
-      {isLoading ? <p>Loading rates...</p> : (
-        <ul className="watchlist-items">
-          {watchList.map((item, index) => (
-            <li key={index}>
-              {item.currency}: {item.trend}
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
-    </div>
+    <>
+      <Navbar />
+      <div className="watchlist-page">
+        <h2>Stock Watchlist</h2>
+        {isLoading ? (
+          <p>Loading data...</p>
+        ) : isError ? (
+          <p>Error loading watchlist. Please try again later.</p>
+        ) : watchList.length === 0 ? (
+          <p>No data available.</p>
+        ) : (
+          <ul className="watchlist-items">
+            {watchList.map((item, index) => (
+              <li key={index}>
+                {item.symbol} - {item.name} ({item.currency})
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </>
   );
 };
 
 export default WatchlistPage;
-
-
-                   
