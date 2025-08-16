@@ -138,6 +138,11 @@
   font-size: 1.1rem;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 600px) {
+    .admin-dashboard{
+    font-size: 1.8rem;
+  }
+}
 
 .admin-options {
   display: grid;

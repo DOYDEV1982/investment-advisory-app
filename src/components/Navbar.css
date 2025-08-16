@@ -108,3 +108,18 @@
     margin-bottom: 0.5rem;
   }
 }
+
+
+@media (max-width: 500px) {
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+
+  .navbar-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+}

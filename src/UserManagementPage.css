@@ -108,7 +108,7 @@
   background-color: #d32f2f;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .admin-nav {
     flex-direction: column;
     align-items: center;

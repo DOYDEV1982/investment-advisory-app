@@ -38,9 +38,9 @@
   box-shadow: 0 2px 6px rgba(76, 175, 80, 0.3);
 }
 
-@media (max-width: 600px) {
-  .socialmedia {
-    flex-direction: column;
-    gap: 10px;
-  }
+@media (max-width: 500px) {
+.copy{
+ margin-top: 20px;
+ margin-left: 0px;
+} 
 }
