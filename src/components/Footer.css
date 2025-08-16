@@ -1,44 +1,23 @@
 .copy {
-  background-color: #1a1a1a;
-  color: #f1f1f1;
+  background-color: #2563EB; 
+  color: #ffffff;
   text-align: center;
-  padding: 30px 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  border-top: 2px solid #4caf50;
-}
-
-.copy p {
-  margin: 0;
-  font-size: 14px;
-  opacity: 0.8;
-}
-
-.socialmedia {
-  margin-top: 15px;
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  flex-wrap: wrap;
+  padding: 1.5rem 0;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .socialmedia a {
-  color: #4caf50;
+  margin: 0 10px;
+  color: #ffffff;
   text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  font-size: 15px;
-  padding: 6px 12px;
-  border-radius: 4px;
+  transition: color 0.3s ease;
 }
 
 .socialmedia a:hover {
-  background-color: #4caf50;
-  color: #fff;
-  transform: scale(1.05);
-  box-shadow: 0 2px 6px rgba(76, 175, 80, 0.3);
+  color: #FACC15; 
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
 .copy{
  margin-top: 20px;
  margin-left: 0px;

@@ -49,6 +49,8 @@ const AdminPage = () => {
           <h2>User Analytics</h2>
           <p>Track user interests, region-specific trends, and investment behavior.</p>
           <button onClick={() => navigate('/User Analytics')}>Go to User Analytics Page</button>
+        </section>
+        <section className="admin-card">
           <h3>👤 User Management</h3>
           <p>Control access and manage user data securely.</p>
           <button onClick={() => navigate('/User Management')}>Go to User Mangement Page</button>

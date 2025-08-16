@@ -1,170 +1,116 @@
-.admin-container {
-  
-  background: linear-gradient(to right, #0A192F, #00B4D8);
-  padding: 15px 40px;
-}
-.hero-office{
-  position: relative;
-  min-height: 72vh;               
-  display: grid;
-  place-items: center;            
-  
-
-  background-image:
-    linear-gradient( to bottom right,
-      rgba(140, 150, 146, 0.78),           
-      rgba(73, 212, 73, 0.55)
-    ),
-    url("/office-hero.jpg");       
-  background-size: cover;          
-  background-position: center 35%; 
-  background-repeat: no-repeat;
+body {
+  background-color: #F9FAFB; 
+  color: #1E293B; 
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.hero-card{
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255,255,255,.18);
-  border-radius: 24px;
-  padding: 28px;
-  max-width: 640px;
-  box-shadow: 0 24px 48px rgba(0,0,0,.28);
+.hero-office {
+  background: linear-gradient(135deg, #2563EB, #1E293B); /* Blue → Gray gradient */
+  color: #F9FAFB;
+  padding: 4rem 2rem;
+  text-align: center;
+  
+}
+
+@media (max-width: 600px) {
+}
+.hero-card h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-card p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
 }
 
 .btn-cta {
-  padding: 12px 22px;
-  border: none;
-  border-radius: 10px;
-  background: linear-gradient(90deg, #22C55E, #16A34A);
-  color: #fff;
-  font-weight: 600;
-  cursor: pointer;
-  text-decoration: none; 
-  display: inline-block;
+  background-color: #FACC15; 
+  color: #1E293B;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
+
 .btn-cta:hover {
-  filter: brightness(1.06);
+  background-color: #eab308; 
 }
-
-.home {
-  color: white;
-  margin: 0 15px;
-  font-weight: 500;
-  transition: 0.3s ease;
-}
-
-.home h1 {
-  font-size: 2.5rem;
-  color: #006064;
-  margin-bottom: 20px;
-}
-
-.home p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-}
-
-
 
 .admin-header {
+  background-color: #2563EB;
+  color: #F9FAFB;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #203a43;
-  color: white;
-  padding: 1rem 2rem;
+}
+
+.admin-header h1 {
+  font-size: 1.8rem;
+}
+
+.admin-options {
+  display: flex;
+  gap: 1rem;
+}
+
+.admin-options .admin-card {
+  background-color: #F9FAFB;
+  color: #1E293B;
+  padding: 1rem;
   border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.admin-header button {
-  background: #f44336;
-  color: white;
-  border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.admin-header button:hover {
-  border-bottom: 2px solid #90E0EF;
+.admin-options .admin-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 .admin-main {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
-  margin-top: 2rem;
+  margin: 2rem;
 }
 
 .admin-card {
-  background: linear-gradient(135deg, #E0F7FA, #FFFFFF);
-  padding: 60px;
-  text-align: center;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border: 1px solid #E5E7EB;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .admin-card h2 {
-  color: #0077B6;
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+  color: #2563EB;
+  margin-bottom: 0.5rem;
 }
 
 .admin-card button {
-  margin-top: 1rem;
-  background: #2c5364;
-  color: white;
-  padding: 0.5rem 1rem;
+  background-color: #2563EB;
+  color: #F9FAFB;
+  padding: 0.6rem 1.2rem;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .admin-card button:hover {
-  color: #90E0EF;
+  background-color: #FACC15;
+  color: #1E293B;
 }
 
-.admin-dashboard {
-  max-width: 960px;
-  margin: 2rem auto;
-  padding: 2rem;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fff;
-}
-
-.admin-dashboard h1 {
-  color: #495057;
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-}
-@media screen and (max-width: 600px) {
-    .admin-dashboard{
-    font-size: 1.8rem;
-  }
-}
-
-.admin-options {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
-
-.admin-card {
-  background-color: #f3f4f6;
-  border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  padding: 1.5rem;
-  text-decoration: none;
-  color: #1a202c;
-  transition: all 0.3s ease;
-}
-
-.admin-card:hover {
-  background-color: #0077B6;
-  color: white;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
+.footer {
+  background-color: #1E293B;
+  color: #F9FAFB;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
 }
