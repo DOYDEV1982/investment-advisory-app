@@ -1,19 +1,16 @@
 body {
   background-color: #F9FAFB; 
-  color: #1E293B; 
+  color: #0d4fb9; 
   font-family: 'Segoe UI', sans-serif;
 }
 
 .hero-office {
-  background: linear-gradient(135deg, #2563EB, #1E293B); /* Blue → Gray gradient */
-  color: #F9FAFB;
+  background: linear-gradient(135deg, #2563EB, #064dc0); 
+  color: white;
   padding: 4rem 2rem;
   text-align: center;
-  
 }
 
-@media (max-width: 600px) {
-}
 .hero-card h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
@@ -25,8 +22,8 @@ body {
 }
 
 .btn-cta {
-  background-color: #FACC15; 
-  color: #1E293B;
+  background-color: #155dfa; 
+  color: white;
   padding: 0.8rem 1.5rem;
   border-radius: 8px;
   font-weight: bold;
@@ -38,6 +35,7 @@ body {
   background-color: #eab308; 
 }
 
+
 .admin-header {
   background-color: #2563EB;
   color: #F9FAFB;
@@ -48,6 +46,11 @@ body {
   align-items: center;
 }
 
+@media (max-width: 768px) {
+  .admin-card {
+    padding: 1rem;
+  }
+}
 .admin-header h1 {
   font-size: 1.8rem;
 }
@@ -107,8 +110,9 @@ body {
   color: #1E293B;
 }
 
+
 .footer {
-  background-color: #1E293B;
+  background-color: #0758db;
   color: #F9FAFB;
   text-align: center;
   padding: 1rem 0;

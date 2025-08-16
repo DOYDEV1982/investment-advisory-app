@@ -36,23 +36,3 @@
 .NavUp {
   border-bottom: 3px solid #1E293B; 
 }
-
-
-@media (max-width: 600px) {
-  .navbar-title {
-  color: #F9FAFB; 
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.navbar-nav {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.navbar-nav a {
-  color: #F9FAFB; 
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}}

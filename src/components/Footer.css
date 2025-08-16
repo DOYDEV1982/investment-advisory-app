@@ -16,10 +16,3 @@
 .socialmedia a:hover {
   color: #FACC15; 
 }
-
-@media (max-width: 600px) {
-.copy{
- margin-top: 20px;
- margin-left: 0px;
-} 
-}
