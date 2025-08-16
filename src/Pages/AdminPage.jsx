@@ -15,11 +15,13 @@ const AdminPage = () => {
   return (
     <>
     <Navbar />
-    <div className="admin-container">
-      <div className="home">
-      <h1>Welcome to the Global Investment Advisory App</h1>
-      <p>Get insights into stable and profitable investment markets worldwide.</p>
-    </div>
+    <section className="hero-office">
+  <div className="hero-card">
+    <h1>Investment Advisory App</h1>
+    <p>Insights into stable and profitable markets worldwide.</p>
+    <button className="btn-cta">Get Started</button>
+  </div>
+</section>
     <div className="footer">
       <p>&copy; 2025 Global Investment Advisory. All rights reserved.</p>
     </div>
@@ -57,7 +59,6 @@ const AdminPage = () => {
         </section>
       </main>
       <Footer /> 
-    </div>
     </>
 
   );
