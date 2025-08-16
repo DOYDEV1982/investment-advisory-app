@@ -49,7 +49,7 @@ p {
   margin-top: 20px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .watchlist-page {
     padding: 20px;
   }
