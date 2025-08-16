@@ -1,14 +1,16 @@
 body {
-  background-color: #F9FAFB; 
-  color: #0d4fb9; 
-  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #F5DEB3; 
+  color: #1E3A8A; 
 }
 
 .hero-office {
-  background: linear-gradient(135deg, #2563EB, #064dc0); 
-  color: white;
-  padding: 4rem 2rem;
+  background: linear-gradient(rgba(30, 58, 138, 0.85), rgba(30, 58, 138, 0.85)),
+              url('../assets/office-bg.jpg') center/cover no-repeat;
+  color: black;
   text-align: center;
+  padding: 4rem 2rem;
 }
 
 .hero-card h1 {
@@ -22,99 +24,97 @@ body {
 }
 
 .btn-cta {
-  background-color: #155dfa; 
-  color: white;
+  background-color: #F5DEB3; 
+  color: #1E3A8A; 
   padding: 0.8rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 5px;
   font-weight: bold;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .btn-cta:hover {
-  background-color: #eab308; 
+  background-color: #1E3A8A;
+  color: #F5DEB3;
 }
-
 
 .admin-header {
-  background-color: #2563EB;
-  color: #F9FAFB;
-  padding: 1rem 2rem;
-  margin-top: 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-@media (max-width: 768px) {
-  .admin-card {
-    padding: 1rem;
-  }
-}
-.admin-header h1 {
-  font-size: 1.8rem;
+  background-color: #1E3A8A; 
+  color: #F5DEB3;
+  padding: 1.5rem;
+  text-align: center;
 }
 
 .admin-options {
+  margin-top: 1rem;
   display: flex;
-  gap: 1rem;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .admin-options .admin-card {
-  background-color: #F9FAFB;
-  color: #1E293B;
-  padding: 1rem;
-  border-radius: 8px;
+  background-color: #F5DEB3;
+  color: #1E3A8A;
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
   text-decoration: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .admin-options .admin-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+  background-color: #e2c87d;
+  transform: translateY(-3px);
 }
 
 .admin-main {
+  padding: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
-  margin: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
 }
 
 .admin-card {
-  background-color: #ffffff;
-  border: 1px solid #E5E7EB;
+  background-color: #fff;
+  border: 2px solid #1E3A8A;
+  border-radius: 8px;
   padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.admin-card h2 {
-  color: #2563EB;
-  margin-bottom: 0.5rem;
+.admin-card h2, 
+.admin-card h3 {
+  color: #1E3A8A;
+  margin-bottom: 0.8rem;
+}
+
+.admin-card p {
+  margin-bottom: 1rem;
+  color: #333;
 }
 
 .admin-card button {
-  background-color: #2563EB;
-  color: #F9FAFB;
-  padding: 0.6rem 1.2rem;
+  background-color: #1E3A8A;
+  color: #F5DEB3;
   border: none;
-  border-radius: 6px;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .admin-card button:hover {
-  background-color: #FACC15;
-  color: #1E293B;
+  background-color: #F5DEB3;
+  color: #1E3A8A;
+  border: 1px solid #1E3A8A;
 }
 
-
-.footer {
-  background-color: #0758db;
-  color: #F9FAFB;
-  text-align: center;
-  padding: 1rem 0;
-  margin-top: 2rem;
+@media (max-width: 768px) {
+  .hero-card h1 {
+    font-size: 1.8rem;
+  }
+  .admin-main {
+    padding: 1rem;
+  }
 }

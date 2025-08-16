@@ -1,103 +1,80 @@
-.login-container {
+.profile-page {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  padding: 20px;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #0F2454 0%, #1E3A8A 55%, #0F2454 100%);
 }
 
-.login-form {
-  background-color: #fff;
-  padding: 40px;
-  border-radius: 12px;
+.profile-card {
   width: 100%;
   max-width: 420px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
-
-.login-form h2 {
+  background: #FFFFFF;
+  border-radius: 18px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+  padding: 2rem;
   text-align: center;
-  margin-bottom: 24px;
-  color: #2c3e50;
 }
 
-.login-form input {
+.profile-card h2 {
+  margin: 0 0 1.25rem 0;
+  color: #1E3A8A; 
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.profile-card input {
   width: 100%;
-  padding: 14px 16px;
-  margin-bottom: 18px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  transition: border 0.3s ease;
-  font-size: 16px;
-}
-
-@media (max-width: 500px) {
- .login-form h2 {
-    font-size: 1.5rem;
-  }
-}
-
-.login-form input:focus {
+  height: 52px;
+  border: 1px solid #E6E8F0;
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 0 14px;
+  font-size: 1rem;
+  margin: 0.6rem 0;
   outline: none;
-  border-color: #2980b9;
-  box-shadow: 0 0 4px rgba(41, 128, 185, 0.5);
+  transition: border-color 0.2s ease;
 }
 
-.login-form button {
+.profile-card input::placeholder {
+  color: #9AA3B2;
+}
+
+.profile-card input:focus {
+  border-color: #1E3A8A;
+  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.12);
+}
+
+.profile-card button {
   width: 100%;
-  padding: 14px;
-  background-color: #2980b9;
-  border: none;
-  border-radius: 8px;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
+  height: 54px;
+  margin-top: 1rem;
+  border: 0;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s ease;
+  background: linear-gradient(180deg, #1E3A8A 0%, #0F2454 100%); /* Deep Navy gradient */
+  color: #F5DEB3; 
+  transition: transform 0.15s ease, filter 0.15s ease;
 }
 
-.login-form button:hover {
-  background-color: #1c6ea4;
+.profile-card button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
 }
 
-.login-form ul {
-  margin-top: 24px;
-  list-style: none;
-  padding: 0;
-  max-height: 250px;
-  overflow-y: auto;
+.profile-card button:active {
+  transform: translateY(0);
 }
 
-.login-form li {
-  padding: 12px;
-  background: #f1f1f1;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  font-size: 14px;
-  color: #333;
-}
-
-.login-form .card {
-  background: #ecf0f1;
-  padding: 16px;
-  margin: 10px 0;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-.login-form .card h3 {
-  margin: 0 0 8px 0;
-  font-size: 18px;
-}
-
-.login-form .card p {
-  margin: 0;
-  font-size: 14px;
-}
-
-.login-form .error {
-  color: red;
-  font-size: 14px;
-  margin-top: 10px;
+@media (max-width: 480px) {
+  .profile-card {
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+  .profile-card h2 {
+    font-size: 1.6rem;
+  }
 }

@@ -1,80 +1,64 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.analytics-container {
+.analytics {
+  background-color: #F5DEB3; 
   min-height: 100vh;
   padding: 2rem;
-  background-color: #f1f5f9;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #0f172a;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.analytics-container h2 {
-  font-size: 2rem;
-  color: #1e40af;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.analytics-container p {
-  font-size: 1.1rem;
-  color: #64748b;
-  text-align: center;
-}
-
-.analytics-list {
-  list-style-type: none;
-  padding: 0;
+.analytics-card {
+  background-color: #1E3A8A; 
+  color: #F5DEB3; 
+  max-width: 800px;
   width: 100%;
-  max-width: 700px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-  animation: fadeIn 0.4s ease-in-out;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 
-.analytics-list li {
-  padding: 1rem 1.5rem;
-  border-bottom: 1px solid #e2e8f0;
-  font-size: 1.05rem;
-  color: #1e293b;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.analytics-card h2 {
+  color: #FFD700; 
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-.analytics-list li:last-child {
-  border-bottom: none;
+.analytics-card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
 
+.analytics-btn {
+  background-color: #F5DEB3; 
+  color: #1E3A8A; 
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
 
-@media (max-width: 600px) {
-  .analytics-list li {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
+.analytics-btn:hover {
+  background-color: #FFD700;
+  color: #1E3A8A;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .analytics-card {
+    padding: 1.5rem;
   }
 
-  .analytics-container h2 {
+  .analytics-card h2 {
     font-size: 1.6rem;
   }
-}
 
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .analytics-card p {
+    font-size: 1rem;
   }
 }

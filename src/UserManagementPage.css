@@ -1,121 +1,80 @@
 .user-management {
-  padding: 40px 20px;
-  max-width: 900px;
-  margin: auto;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f5f7fa;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.user-management h2 {
-  text-align: center;
-  color: #333;
-  margin-bottom: 30px;
-}
-
-.admin-nav {
+  background-color: #F5DEB3; 
+  min-height: 100vh;
+  padding: 2rem;
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 25px;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.admin-nav a {
-  text-decoration: none;
-  padding: 10px 15px;
-  background-color: #4caf50;
-  color: white;
-  border-radius: 6px;
-  transition: background-color 0.3s ease;
-}
-
-.admin-nav a:hover {
-  background-color: #43a047;
-}
-
-.add-user-form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  margin-bottom: 30px;
-}
-
-.add-user-form input,
-.add-user-form select {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  min-width: 200px;
-}
-
-.add-user-form button {
-  background-color: #2196f3;
-  color: white;
-  padding: 10px 16px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.add-user-form button:hover {
-  background-color: #1976d2;
-}
-
-.feedback {
-  text-align: center;
-  margin-top: 10px;
-  color: #444;
-  font-weight: 500;
-}
-
-.user-list {
-  list-style: none;
-  padding: 0;
-  margin-top: 20px;
-}
-
-.user-list li {
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  padding: 12px 16px;
-  border-radius: 6px;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
 }
 
-.user-list li span {
-  font-size: 16px;
-  font-weight: 500;
+.user-management h2 {
+  color: #1E3A8A; 
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
-.user-list li button {
-  background-color: #f44336;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 4px;
+.user-table {
+  width: 100%;
+  max-width: 900px;
+  border-collapse: collapse;
+  background-color: #1E3A8A; 
+  color: #F5DEB3; 
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.user-table th,
+.user-table td {
+  padding: 1rem;
+  text-align: left;
+}
+
+.user-table th {
+  background-color: #0F2454; 
+  color: #FFD700; 
+}
+
+.user-table tr:nth-child(even) {
+  background-color: rgba(245, 222, 179, 0.1); /* Wheat tint for contrast */
+}
+
+.user-table tr:hover {
+  background-color: #FFD700;
+  color: #1E3A8A;
   cursor: pointer;
-  transition: background-color 0.2s ease;
 }
 
-.user-list li button:hover {
-  background-color: #d32f2f;
+.btn-user {
+  background-color: #FFD700; 
+  color: #1E3A8A;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.2rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 
-@media (max-width: 500px) {
-  .admin-nav {
-    flex-direction: column;
-    align-items: center;
+.btn-user:hover {
+  background-color: #F5DEB3; 
+  color: #1E3A8A;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .user-table {
+    font-size: 0.9rem;
   }
 
-  .add-user-form {
-    flex-direction: column;
-    align-items: center;
+  .user-management h2 {
+    font-size: 1.6rem;
+  }
+
+  .btn-user {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
   }
 }

@@ -1,18 +1,43 @@
-.copy {
-  background-color: #2563EB; 
-  color: #ffffff;
+.footer {
+  background-color: #1E3A8A; 
+  color: #FFFFFF;
+  padding: 1.5rem 2rem;
   text-align: center;
-  padding: 1.5rem 0;
-  font-family: 'Segoe UI', sans-serif;
+  margin-top: 2rem;
 }
 
-.socialmedia a {
-  margin: 0 10px;
-  color: #ffffff;
+.footer-content {
+  max-width: 900px;
+  margin: auto;
+}
+
+.footer p {
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  color: #F5DEB3; 
+}
+
+@media (max-width: 500px) {
+.footer p{
+ margin-top: 20px;
+ margin-left: 0px;
+ 
+}
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  color: #FFFFFF;
   text-decoration: none;
-  transition: color 0.3s ease;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
-.socialmedia a:hover {
-  color: #FACC15; 
+.social-links a:hover {
+  color: #F5DEB3; 
 }
