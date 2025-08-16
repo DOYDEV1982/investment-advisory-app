@@ -19,7 +19,9 @@ const AdminPage = () => {
   <div className="hero-card">
     <h1>Investment Advisory App</h1>
     <p>Insights into stable and profitable markets worldwide.</p>
-    <button className="btn-cta">Get Started</button>
+    <Link to="/advisory" className="btn-cta">
+          Get Started
+        </Link>
   </div>
 </section>
     <div className="footer">

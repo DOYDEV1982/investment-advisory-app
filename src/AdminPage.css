@@ -31,6 +31,21 @@
   box-shadow: 0 24px 48px rgba(0,0,0,.28);
 }
 
+.btn-cta {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #22C55E, #16A34A);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none; 
+  display: inline-block;
+}
+.btn-cta:hover {
+  filter: brightness(1.06);
+}
+
 .home {
   color: white;
   margin: 0 15px;
