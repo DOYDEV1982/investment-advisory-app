@@ -11,23 +11,26 @@ const MarketDataPage = () => {
     fetch("https://open.er-api.com/v6/latest/USD")
       .then((res) => res.json())
       .then((data) => {
-        console.log("API Response:", data);
         if (data.result === "success" && data.rates) {
           setRates(data.rates);
         } else {
           throw new Error("Unexpected API format");
         }
       })
-      .catch((err) => {
-        console.error("Failed to fetch data", err);
-        setError(err);
-      })
+      .catch((err) => setError(err))
       .finally(() => setLoading(false));
   }, []);
 
+  // Pick 10+ key currencies
+  const selectedCurrencies = [
+    "NGN", "EUR", "GBP", "JPY", "CAD",
+    "AUD", "CNY", "INR", "BRL", "ZAR",
+    "KES", "CHF"
+  ];
+
   return (
     <>
-      <Navbar /> 
+      <Navbar />
       <div className="market-data">
         <h2>Global Currency Exchange Rates (Base: USD)</h2>
 
@@ -35,12 +38,14 @@ const MarketDataPage = () => {
         {error && <p style={{ color: "red" }}>Error: {error.message}</p>}
 
         {!loading && !error && rates && (
-          <ul>
-            <li>NGN (Naira): {rates.NGN}</li>
-            <li>EUR (Euro): {rates.EUR}</li>
-            <li>GBP (Pound): {rates.GBP}</li>
-            <li>JPY (Yen): {rates.JPY}</li>
-          </ul>
+          <div className="currency-grid">
+            {selectedCurrencies.map((currency) => (
+              <div className="currency-card" key={currency}>
+                <h3>{currency}</h3>
+                <p>{rates[currency]}</p>
+              </div>
+            ))}
+          </div>
         )}
       </div>
     </>

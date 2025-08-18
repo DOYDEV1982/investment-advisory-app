@@ -1,64 +1,69 @@
-.analytics {
-  background-color: #F5DEB3; 
+/* Container */
+.analytics-container {
+  padding: 2rem;
+  background-color: #f5deb3; /* Wheat */
   min-height: 100vh;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.analytics-card {
-  background-color: #1E3A8A; 
-  color: #F5DEB3; 
-  max-width: 800px;
-  width: 100%;
-  margin-bottom: 2rem;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
   text-align: center;
 }
 
-.analytics-card h2 {
-  color: #FFD700; 
+/* Title */
+.analytics-container h2 {
+  color: #1e3a8a; /* Deep Navy */
   font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.analytics-card p {
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-weight: bold;
   margin-bottom: 1.5rem;
 }
 
-.analytics-btn {
-  background-color: #F5DEB3; 
-  color: #1E3A8A; 
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 6px;
+/* Loading & Error */
+.analytics-container p {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 1rem 0;
+}
+
+/* Analytics list */
+.analytics-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.analytics-list li {
+  background-color: #1e3a8a; /* Deep Navy */
+  color: #f5deb3; /* Wheat */
+  padding: 1rem;
+  border-radius: 8px;
   font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 
-.analytics-btn:hover {
-  background-color: #FFD700;
-  color: #1E3A8A;
-  transform: scale(1.05);
+.analytics-list li:hover {
+  transform: scale(1.02);
+  background-color: #142554; /* Darker navy */
 }
 
-@media (max-width: 768px) {
-  .analytics-card {
-    padding: 1.5rem;
+/* Responsive */
+@media (min-width: 768px) {
+  .analytics-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+}
+
+@media (min-width: 1024px) {
+  .analytics-list {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on desktops */
   }
 
-  .analytics-card h2 {
-    font-size: 1.6rem;
+  .analytics-container h2 {
+    font-size: 2.5rem;
   }
 
-  .analytics-card p {
-    font-size: 1rem;
+  .analytics-list li {
+    font-size: 1.1rem;
+    padding: 1.2rem;
   }
 }

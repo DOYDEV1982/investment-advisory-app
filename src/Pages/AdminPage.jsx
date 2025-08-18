@@ -37,7 +37,7 @@ const AdminPage = () => {
         <button onClick={handleLogout}>Logout</button>
         </div>
       </header>
-
+      <div>
       <main className="admin-main">
         <section className="admin-card">
           <h2>Market Insights</h2>
@@ -50,18 +50,13 @@ const AdminPage = () => {
           <p>Track user interests, region-specific trends, and investment behavior.</p>
           <button onClick={() => navigate("/analytics")}>Go to User Analytics Page</button>
         </section>
-        <section className="admin-card">
-          <h3>User Management</h3>
-          <p>Control access and manage user data securely.</p>
-          <button onClick={() => navigate("/user-management")}>Go to User Mangement Page</button>
-        </section>
-
-        <section className="admin-card">
+         <section className="admin-card">
           <h2>Update Advisory Tips</h2>
           <p>Upload daily advice for stable or risky investment paths globally.</p>
           <button onClick={() => navigate("/advisory")}>Go to Advisory Page</button>
         </section>
       </main>
+      </div>
       <Footer /> 
     </>
 

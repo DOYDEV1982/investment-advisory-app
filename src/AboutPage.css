@@ -1,53 +1,77 @@
+
+
 .AboutPage {
-  background-color: #F5DEB3; 
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  background-color: #F5DEB3; /* Wheat */
   padding: 2rem;
 }
 
 .about {
-  background-color: #1E3A8A; 
-  color: #F5DEB3; 
-  max-width: 700px;
+  background-color: #ffffff;
   padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  max-width: 800px;
+  width: 100%;
   text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .about h2 {
   font-size: 2rem;
+  color: #1E3A8A; /* Deep Navy */
   margin-bottom: 1rem;
-  color: #FFD700; 
 }
 
 .about p {
   font-size: 1.1rem;
+  color: #333;
   line-height: 1.6;
   margin-bottom: 2rem;
 }
 
+/* Contact Button */
 .button .btn-black {
-  background-color: #F5DEB3; 
-  color: #1E3A8A; 
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: bold;
+  background-color: #1E3A8A; /* Deep Navy */
+  color: #F5DEB3; /* Wheat */
+  padding: 0.9rem 2rem;
   border: none;
   border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 
 .button .btn-black:hover {
-  background-color: #FFD700; 
+  background-color: #FFD700; /* Gold Hover */
   color: #1E3A8A;
-  transform: scale(1.05);
 }
 
-@media (max-width: 768px) {
+/* ✅ Responsive for tablets and desktops */
+@media (min-width: 768px) {
+  .about {
+    padding: 3rem;
+  }
+
+  .about h2 {
+    font-size: 2.5rem;
+  }
+
+  .about p {
+    font-size: 1.2rem;
+  }
+
+  .button .btn-black {
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+  }
+}
+
+/* ✅ Responsive for small screens (mobile) */
+@media (max-width: 480px) {
   .about {
     padding: 1.5rem;
   }
@@ -59,4 +83,26 @@
   .about p {
     font-size: 1rem;
   }
+
+  .button .btn-black {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+}
+.button .btn-black {
+  display: inline-block;
+  background-color: #1E3A8A; /* Deep Navy */
+  color: #F5DEB3; /* Wheat */
+  padding: 0.9rem 2rem;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;  /* ✅ Remove underline */
+  transition: all 0.3s ease-in-out;
+}
+
+.button .btn-black:hover {
+  background-color: #FFD700; /* Gold Hover */
+  color: #1E3A8A;
 }

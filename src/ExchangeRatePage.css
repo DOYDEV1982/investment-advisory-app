@@ -1,69 +1,112 @@
-.exchange-rate {
-  background-color: #F5DEB3; 
+/* Page container */
+.market-data {
+  background-color: #f5deb3; /* Wheat */
   min-height: 100vh;
   padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
 }
 
-.exchange-rate h2 {
+/* Heading */
+.market-data h2 {
+  color: #1e3a8a; /* Deep Navy */
   font-size: 2rem;
-  color: #1E3A8A; 
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.exchange-rate p {
-  font-size: 1.1rem;
-  color: #333;
-  max-width: 700px;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.rate-card {
-  background-color: #1E3A8A; 
-  color: #F5DEB3; 
-  width: 100%;
-  max-width: 600px;
-  padding: 1.5rem;
-  border-radius: 10px;
   margin-bottom: 1.5rem;
-  text-align: center;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
-.btn-rate {
-  background-color: #1E3A8A; 
-  color: #F5DEB3;
-  border: none;
-  padding: 0.75rem 1.5rem;
+/* Dropdowns container */
+.dropdowns {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap; /* ✅ allows stacking on mobile */
+  margin-bottom: 1.5rem;
+}
+
+/* Dropdown style */
+.dropdowns select {
+  padding: 0.7rem 1rem;
   font-size: 1rem;
-  font-weight: bold;
+  border: 2px solid #1e3a8a;
   border-radius: 6px;
-  cursor: pointer;
-  margin-top: 1rem;
+  background-color: #fff;
+  color: #1e3a8a;
+  font-weight: bold;
   transition: all 0.3s ease-in-out;
 }
 
-.btn-rate:hover {
-  background-color: #FFD700; 
-  color: #1E3A8A;
-  transform: scale(1.05);
+.dropdowns select:focus {
+  outline: none;
+  border-color: #142554; /* darker navy */
 }
 
+/* Result box */
+.exchange-result {
+  margin-top: 1.5rem;
+  background-color: #1e3a8a; /* Deep Navy */
+  color: #f5deb3; /* Wheat */
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: inline-block;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive tweaks */
 @media (max-width: 768px) {
-  .rate-card {
-    padding: 1rem;
+  .market-data h2 {
+    font-size: 1.5rem;
   }
 
-  .exchange-rate h2 {
-    font-size: 1.6rem;
+  .dropdowns {
+    flex-direction: column; /* ✅ stack dropdowns on mobile */
+    align-items: center;
+    gap: 0.8rem;
   }
 
-  .exchange-rate p {
+  .exchange-result {
     font-size: 1rem;
+    padding: 0.8rem 1.5rem;
   }
 }
 
+@media (min-width: 1024px) {
+  .market-data h2 {
+    font-size: 2.5rem;
+  }
+
+  .exchange-result {
+    font-size: 1.3rem;
+    padding: 1.2rem 2.5rem;
+  }
+}
+
+
+.amount-box {
+  margin: 1.2rem 0;
+}
+
+.amount-box input {
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #1e3a8a; /* Deep Navy */
+  border-radius: 6px;
+  width: 200px;
+  text-align: center;
+  color: #1e3a8a;
+  font-weight: bold;
+}
+
+.amount-box input:focus {
+  outline: none;
+  border-color: #142554; /* darker navy */
+  background-color: #fdf5e6; /* lighter wheat */
+}
+
+/* Responsive tweak */
+@media (max-width: 768px) {
+  .amount-box input {
+    width: 100%;
+    max-width: 280px;
+  }
+}

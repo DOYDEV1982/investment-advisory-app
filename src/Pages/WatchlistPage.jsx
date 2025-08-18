@@ -1,17 +1,16 @@
-import { useState, useEffect } from 'react';
-import Navbar from '../components/Navbar';
-import '../WatchlistPage.css';
+import {useState, useEffect } from "react";
+import Navbar from '../components/Navbar'
+import "../WatchlistPage.css";
 
 const WatchlistPage = () => {
   const [watchList, setWatchList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
 
-  let apikey='9XiDt6ct1mTGMIhVEFuOgUGFV6CxZDJZ'
+  let apikey = '9XiDt6ct1mTGMIhVEFuOgUGFV6CxZDJZ';
   
   useEffect(() => {
-    // Use a CORS proxy for development (replace with actual API in production if CORS is allowed)
-    const apiUrl = 'https://financialmodelingprep.com/stable/search-symbol?query=AAPL&apikey=9XiDt6ct1mTGMIhVEFuOgUGFV6CxZDJZ';
+    const apiUrl = `https://financialmodelingprep.com/stable/search-symbol?query=AAPL&apikey=${apikey}`;
 
     fetch(apiUrl)
       .then(response => {
@@ -19,7 +18,6 @@ const WatchlistPage = () => {
         return response.json();
       })
       .then(data => {
-        console.log(data); // Log to inspect the API response
         setWatchList(data);
       })
       .catch(error => {
@@ -27,7 +25,12 @@ const WatchlistPage = () => {
         setIsError(true);
       })
       .finally(() => setIsLoading(false));
-  }, []); // Fixed dependency array
+  }, []);
+
+  // 🔥 Handle remove
+  const handleRemove = (symbol) => {
+    setWatchList(prevList => prevList.filter(item => item.symbol !== symbol));
+  };
 
   return (
     <>
@@ -44,7 +47,15 @@ const WatchlistPage = () => {
           <ul className="watchlist-items">
             {watchList.map((item, index) => (
               <li key={index}>
-                {item.symbol} - {item.name} ({item.currency})
+                <div className="watchlist-card">
+                  <span>{item.symbol} - {item.name} ({item.currency})</span>
+                  <button 
+                    className="remove-btn" 
+                    onClick={() => handleRemove(item.symbol)}
+                  >
+                    Remove
+                  </button>
+                </div>
               </li>
             ))}
           </ul>

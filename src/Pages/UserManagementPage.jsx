@@ -1,94 +1,48 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import "../UserManagementPage.css";
+import Navbar from '../components/Navbar';
+import '../UserManagementPage.css';
 
 const UserManagementPage = () => {
-  const [users, setUsers] = useState([]);
-  const [newUser, setNewUser] = useState("");
-  const [role, setRole] = useState("user");
-  const [feedback, setFeedback] = useState("");
-
-  useEffect(() => {
-    
-    const storedUsers = JSON.parse(localStorage.getItem("users")) || [];
-    setUsers(storedUsers);
-  }, []);
-
-  const handleAddUser = () => {
-    if (!newUser.trim()) {
-      setFeedback("Username cannot be empty.");
-      return;
-    }
-    const exists = users.some(
-      (user) => user.name.toLowerCase() === newUser.toLowerCase()
-    );
-    if (exists) {
-      setFeedback("User already exists.");
-      return;
-    }
-    const updatedUsers = [...users, { name: newUser, role }];
-    setUsers(updatedUsers);
-    localStorage.setItem("users", JSON.stringify(updatedUsers));
-    setNewUser("");
-    setRole("user");
-    setFeedback("User added successfully.");
-  };
-
-  const handleDeleteUser = (index) => {
-    const updatedUsers = users.filter((_, i) => i !== index);
-    setUsers(updatedUsers);
-    localStorage.setItem("users", JSON.stringify(updatedUsers));
-    setFeedback("User deleted.");
-  };
-
   return (
     <>
       <Navbar />
-      <div className="user-management">
-        <div className="admin-nav">
-          
-          <Link to="/exchange-rate" className="nav-link">
-           Exchange Rate
-           </Link>
-          <Link to="/market-data" className="nav-link"> 
-            MarketData
-          </Link>
-          <Link to="/advisory" className="nav-link">
-            AnalyticsPage
-          </Link>
-          <Link to="/profile" className="nav-link">
-            WatchlistPage
-          </Link>
-        </div>
-
+      <div className="user-management-container">
         <h2>User Management</h2>
+        <form className="user-management-form">
+          <label>
+            Full Name
+            <input type="text" placeholder="Enter full name" required />
+          </label>
 
-        <div className="add-user-form">
-          <input
-            type="text"
-            placeholder="Enter username"
-            value={newUser}
-            onChange={(e) => setNewUser(e.target.value)}
-          />
-          <select value={role} onChange={(e) => setRole(e.target.value)}>
-            <option value="user">User</option>
-            <option value="admin">Admin</option>
-          </select>
-          <button onClick={handleAddUser}>Add User</button>
-          {feedback && <p className="feedback">{feedback}</p>}
-        </div>
+          <label>
+            Email
+            <input type="email" placeholder="Enter email" required />
+          </label>
 
-        <ul className="user-list">
-          {users.map((user, index) => (
-            <li key={index}>
-              <span>
-                {user.name} ({user.role})
-              </span>
-              <button onClick={() => handleDeleteUser(index)}>Delete</button>
-            </li>
-          ))}
-        </ul>
+          <label>
+            Role
+            <select>
+              <option value="user">User</option>
+              <option value="admin">Admin</option>
+              <option value="moderator">Moderator</option>
+            </select>
+          </label>
+
+          <label>
+            Status
+            <select>
+              <option value="active">Active</option>
+              <option value="inactive">Inactive</option>
+              <option value="suspended">Suspended</option>
+            </select>
+          </label>
+
+          <label className="span-2">
+            Notes
+            <textarea placeholder="Add notes about the user"></textarea>
+          </label>
+
+          <button type="submit">Save User</button>
+        </form>
       </div>
     </>
   );

@@ -1,97 +1,57 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import { useState } from 'react';
 import '../ProfilePage.css';
 
 const ProfilePage = () => {
-  const navigate = useNavigate();
+  const [image, setImage] = useState(null);
 
-  const [username, setUserName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [users, setUsers] = useState([]);
-
-  const handleLogin = (e) => {
-    e.preventDefault();
-
-    if (!username || !password || !email) {
-      alert('All fields are required');
-      return;
+  const handleImageUpload = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setImage(URL.createObjectURL(file));
     }
-
-    
-    if (username.length > 8 && password.length < 8 && email.indexOf('@') === -1) {
-      localStorage.setItem('isAuthenticated', 'true');
-      navigate('/admin');
-    } else {
-      alert('Invalid credentials!');
-    }
-
-    
-    setUsers((prev) => [
-      ...prev,
-      { id: prev.length + 1, name: username, email, password },
-    ]);
-
-    
-    setUserName('');
-    setEmail('');
-    setPassword('');
-  };
-
-  const handleRemoveUser = (id) => {
-    setUsers((prev) => prev.filter((user) => user.id !== id));
   };
 
   return (
     <>
       <Navbar />
-      <div className="login-container">
-        <form className="login-form" onSubmit={handleLogin}>
-          <h2>Login</h2>
+      <div className="profile-container">
+        <h2>My Profile</h2>
+        <form className="profile-form">
+          <div className="profile-pic-section">
+            <img
+              src={image || "https://via.placeholder.com/120"}
+              alt="Profile"
+              className="profile-pic"
+            />
+            <input type="file" accept="image/*" onChange={handleImageUpload} />
+          </div>
 
-          <input
-            type="text"
-            placeholder="Username"
-            value={username}
-            onChange={(e) => setUserName(e.target.value)}
-            required
-          />
+          <label>
+            Full Name:
+            <input type="text" placeholder="Enter your name" />
+          </label>
 
-          <input
-            type="text"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
+          <label>
+            Email:
+            <input type="email" placeholder="Enter your email" />
+          </label>
 
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
+          <label>
+            Phone:
+            <input type="tel" placeholder="Enter your phone number" />
+          </label>
 
-          <button type="submit">Login</button>
+          <label>
+            Bio:
+            <textarea placeholder="Write something about yourself..." />
+          </label>
+
+          <button type="submit">Update Profile</button>
         </form>
-
-        
-        <ul>
-          {users.map((item) => (
-            <li key={item.id} style={{ marginBottom: '10px' }}>
-              Name: {item.name} — Email: {item.email}
-              <button
-                style={{ marginLeft: '10px' }}
-                onClick={() => handleRemoveUser(item.id)}
-              >
-                Remove
-              </button>
-            </li>
-          ))}
-        </ul>
       </div>
+      <Footer />
     </>
   );
 };

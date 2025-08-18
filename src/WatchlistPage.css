@@ -1,80 +1,98 @@
-.watchlist {
-  background-color: #F5DEB3; 
+.watchlist-page {
+  background-color: #f5deb3; /* Wheat */
   min-height: 100vh;
   padding: 2rem;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Heading */
+.watchlist-page h2 {
+  color: #1e3a8a; /* Deep Navy */
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Loading / Error messages */
+.watchlist-page p {
+  color: #1e3a8a;
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+/* Watchlist items container */
+.watchlist-items {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  max-width: 1000px;
+}
+
+/* Each item card */
+.watchlist-items li {
+  background-color: #1e3a8a; /* Deep Navy */
+  color: #f5deb3; /* Wheat */
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  font-size: 1rem;
+  text-align: left;
+  transition: transform 0.2s ease-in-out;
+}
+
+.watchlist-items li:hover {
+  transform: translateY(-4px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .watchlist-page {
+    padding: 1rem;
+  }
+
+  .watchlist-page h2 {
+    font-size: 1.5rem;
+  }
+
+  .watchlist-items li {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .watchlist-page h2 {
+    font-size: 2.5rem;
+  }
+
+  .watchlist-items li {
+    font-size: 1.1rem;
+    padding: 1.2rem;
+  }
+}
+
+.watchlist-card {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 }
 
-.watchlist h2 {
-  color: #1E3A8A; 
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.watchlist-table {
-  width: 100%;
-  max-width: 800px;
-  border-collapse: collapse;
-  background-color: #1E3A8A; 
-  color: #F5DEB3; 
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-}
-
-.watchlist-table th,
-.watchlist-table td {
-  padding: 1rem;
-  text-align: left;
-}
-
-.watchlist-table th {
-  background-color: #0F2454; 
-  color: #FFD700; 
-}
-
-.watchlist-table tr:nth-child(even) {
-  background-color: rgba(245, 222, 179, 0.1);
-}
-
-.watchlist-table tr:hover {
-  background-color: #FFD700; 
-  color: #1E3A8A;
-  cursor: pointer;
-}
-
-.btn-watchlist {
-  background-color: #FFD700; 
-  color: #1E3A8A;
-  border: none;
-  padding: 0.5rem 1rem;
-  margin: 0.2rem;
-  font-size: 0.9rem;
+/* Remove button */
+.remove-btn {
+  background-color: #f5deb3; /* Wheat */
+  color: #1e3a8a; /* Deep Navy */
+  border: 1px solid #1e3a8a;
+  padding: 0.3rem 0.6rem;
   border-radius: 6px;
+  font-size: 0.85rem;
   cursor: pointer;
-  transition: 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-.btn-watchlist:hover {
-  background-color: #F5DEB3; 
-  color: #1E3A8A;
-  transform: scale(1.05);
-}
-
-@media (max-width: 768px) {
-  .watchlist-table {
-    font-size: 0.9rem;
-  }
-
-  .watchlist h2 {
-    font-size: 1.6rem;
-  }
-
-  .btn-watchlist {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.8rem;
-  }
+.remove-btn:hover {
+  background-color: #1e3a8a; /* Deep Navy */
+  color: #f5deb3; /* Wheat */
 }

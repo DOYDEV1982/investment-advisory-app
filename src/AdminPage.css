@@ -1,120 +1,122 @@
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #F5DEB3; 
-  color: #1E3A8A; 
-}
-
+/* Hero Section */
 .hero-office {
-  background: linear-gradient(rgba(30, 58, 138, 0.85), rgba(30, 58, 138, 0.85)),
-              url('../assets/office-bg.jpg') center/cover no-repeat;
-  color: black;
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #F5DEB3 0%, #1E3A8A 100%);
+  color: white;
 }
 
 .hero-card h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
 
 .hero-card p {
-  font-size: 1.2rem;
   margin-bottom: 1.5rem;
 }
 
 .btn-cta {
-  background-color: #F5DEB3; 
-  color: #1E3A8A; 
+  background: #1E3A8A; /* Deep Navy */
+  color: #F5DEB3;      /* Wheat */
   padding: 0.8rem 1.5rem;
-  border-radius: 5px;
-  font-weight: bold;
+  border-radius: 8px;
   text-decoration: none;
-  transition: all 0.3s ease;
+  font-weight: bold;
+  transition: background 0.3s ease;
 }
 
 .btn-cta:hover {
-  background-color: #1E3A8A;
-  color: #F5DEB3;
+  background: #0F2454; /* Darker Navy */
 }
 
+/* Admin Header */
 .admin-header {
-  background-color: #1E3A8A; 
-  color: #F5DEB3;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   padding: 1.5rem;
-  text-align: center;
+  background: #F5DEB3; /* Wheat */
+  border-bottom: 3px solid #1E3A8A;
 }
 
 .admin-options {
-  margin-top: 1rem;
   display: flex;
-  justify-content: center;
-  gap: 2rem;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.admin-options .admin-card {
-  background-color: #F5DEB3;
-  color: #1E3A8A;
-  padding: 1rem 1.5rem;
+.admin-options a,
+.admin-options button {
+  background: #1E3A8A;
+  color: #F5DEB3;
+  padding: 0.7rem 1.2rem;
   border-radius: 6px;
+  border: none;
+  cursor: pointer;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease;
 }
 
-.admin-options .admin-card:hover {
-  background-color: #e2c87d;
+.admin-options a:hover,
+.admin-options button:hover {
+  background: #0F2454;
+}
+
+/* Admin Main (Responsive Grid) */
+.admin-main {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile first */
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .admin-main {
+    grid-template-columns: repeat(2, 1fr); /* Tablet */
+  }
+}
+
+@media (min-width: 1200px) {
+  .admin-main {
+    grid-template-columns: repeat(3, 1fr); /* Desktop */
+  }
+}
+
+/* Admin Cards */
+.admin-card {
+  background: #1E3A8A;
+  color: #F5DEB3;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.admin-card:hover {
   transform: translateY(-3px);
 }
 
-.admin-main {
-  padding: 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-}
-
-.admin-card {
-  background-color: #fff;
-  border: 2px solid #1E3A8A;
-  border-radius: 8px;
-  padding: 1.5rem;
-  transition: all 0.3s ease;
-}
-
-.admin-card h2, 
-.admin-card h3 {
-  color: #1E3A8A;
-  margin-bottom: 0.8rem;
-}
-
-.admin-card p {
-  margin-bottom: 1rem;
-  color: #333;
-}
-
 .admin-card button {
-  background-color: #1E3A8A;
+  background: #1E3A8A;
   color: #F5DEB3;
+  padding: 0.7rem 1.2rem;
   border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 5px;
-  font-weight: bold;
+  border-radius: 8px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  margin-top: 1rem;
+  transition: background 0.2s ease;
+  width: 100%; /* Full width on mobile */
 }
 
 .admin-card button:hover {
-  background-color: #F5DEB3;
-  color: #1E3A8A;
-  border: 1px solid #1E3A8A;
+  background: #0F2454;
 }
 
-@media (max-width: 768px) {
-  .hero-card h1 {
-    font-size: 1.8rem;
-  }
-  .admin-main {
-    padding: 1rem;
-  }
+/* Footer */
+.footer {
+  text-align: center;
+  background: #1E3A8A;
+  color: #F5DEB3;
+  padding: 1rem;
+  margin-top: 2rem;
 }

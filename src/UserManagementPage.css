@@ -1,80 +1,97 @@
-.user-management {
-  background-color: #F5DEB3; 
-  min-height: 100vh;
+.user-management-container {
+  max-width: 900px;
+  margin: 2rem auto;
   padding: 2rem;
+  background-color: #F5DEB3; /* Wheat */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.user-management-container h2 {
+  text-align: center;
+  color: #1E3A8A; /* Deep Navy */
+  margin-bottom: 1.5rem;
+}
+
+.user-management-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+}
+
+.user-management-form label {
+  font-weight: bold;
+  color: #1E3A8A;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 0.4rem;
 }
 
-.user-management h2 {
-  color: #1E3A8A; 
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.user-table {
-  width: 100%;
-  max-width: 900px;
-  border-collapse: collapse;
-  background-color: #1E3A8A; 
-  color: #F5DEB3; 
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-}
-
-.user-table th,
-.user-table td {
-  padding: 1rem;
-  text-align: left;
-}
-
-.user-table th {
-  background-color: #0F2454; 
-  color: #FFD700; 
-}
-
-.user-table tr:nth-child(even) {
-  background-color: rgba(245, 222, 179, 0.1); /* Wheat tint for contrast */
-}
-
-.user-table tr:hover {
-  background-color: #FFD700;
-  color: #1E3A8A;
-  cursor: pointer;
-}
-
-.btn-user {
-  background-color: #FFD700; 
-  color: #1E3A8A;
-  border: none;
-  padding: 0.5rem 1rem;
-  margin: 0.2rem;
-  font-size: 0.9rem;
+.user-management-form input,
+.user-management-form select,
+.user-management-form textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
   border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fff;
+}
+
+.user-management-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.user-management-form button {
+  background-color: #1E3A8A; /* Deep Navy */
+  color: #F5DEB3; /* Wheat */
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
-  transition: 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-.btn-user:hover {
-  background-color: #F5DEB3; 
+.user-management-form button:hover {
+  background-color: #FFD700; /* Gold */
   color: #1E3A8A;
-  transform: scale(1.05);
 }
 
-@media (max-width: 768px) {
-  .user-table {
+/* ✅ Responsive: Desktop */
+@media (min-width: 768px) {
+  .user-management-form {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 2rem;
+  }
+
+  .user-management-form .span-2 {
+    grid-column: span 2; /* Notes takes full width */
+  }
+
+  .user-management-form button {
+    grid-column: span 2; /* Center button across */
+    justify-self: center;
+    width: 50%;
+  }
+}
+
+/* ✅ Mobile */
+@media (max-width: 480px) {
+  .user-management-container {
+    margin: 1rem;
+    padding: 1.2rem;
+  }
+
+  .user-management-form input,
+  .user-management-form select,
+  .user-management-form textarea {
     font-size: 0.9rem;
+    padding: 0.6rem;
   }
 
-  .user-management h2 {
-    font-size: 1.6rem;
-  }
-
-  .btn-user {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.8rem;
+  .user-management-form button {
+    width: 100%;
   }
 }
