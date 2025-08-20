@@ -15,7 +15,7 @@ const AboutPage = () => {
           </p>
           <div className="button">
             {/* ✅ Link instead of plain button */}
-            <Link to="/contact-page" className="btn-black">
+            <Link to="/profile" className="btn-black">
               Contact Us
             </Link>
           </div>

@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import OverviewPage from './Pages/OverviewPage'
 import AdminPage from './Pages/AdminPage'
 import AboutPage from './Pages/AboutPage'
 import AnalyticsPage from './Pages/AnalyticsPage'
@@ -14,7 +15,8 @@ function App()  {
   return (
       <Router>
           <Routes>
-            <Route path="/" element={<AdminPage />} />
+            <Route path="/" element={<OverviewPage />} />
+            <Route path="/admin" element={<AdminPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/analytics" element={<AnalyticsPage />} />
             <Route path="/exchange-rate" element={<ExchangeRatePage />} />
@@ -23,6 +25,7 @@ function App()  {
             <Route path="/watch-list" element={<WatchListPage />} />
             <Route path="/user-usermanagement" element={<UserManagementPage />} />
             <Route path="/profile" element={<ProfilePage />} />
+            
           </Routes>
       </Router>
   )

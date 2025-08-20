@@ -42,13 +42,13 @@ const AdminPage = () => {
         <section className="admin-card">
           <h2>Market Insights</h2>
           <p>View global trends, currency fluctuations, and investment tips based on market stability.</p>
-          <button onClick={() => navigate("/market-data")}>Go to Market Data</button>
+          <button onClick={() => navigate("/exchange-rate")}>Go to Exchange Rate</button>
         </section>
 
         <section className="admin-card">
-          <h2>User Analytics</h2>
+          <h2>Stock WatchList</h2>
           <p>Track user interests, region-specific trends, and investment behavior.</p>
-          <button onClick={() => navigate("/analytics")}>Go to User Analytics Page</button>
+          <button onClick={() => navigate("/watch-list")}>Go to Watch List Page Page</button>
         </section>
          <section className="admin-card">
           <h2>Update Advisory Tips</h2>

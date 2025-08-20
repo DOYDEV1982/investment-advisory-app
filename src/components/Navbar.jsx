@@ -16,15 +16,10 @@ const Navbar = () => {
     <div className="navbar">
       <h2 className="navbar-title">Investment Advisory App</h2>
       <nav className="navbar-nav">
-        <Link to="/" end>Dashboard</Link>
+        <Link to="/" end>Overview</Link>
+        <Link to="/admin">Admin</Link>
         <Link to="/about">About</Link>
         <Link to="/analytics">Analytics</Link>
-        <Link to="/exchange-rate">Exchange Rate</Link>
-        <Link to="/market-data">Market Data</Link>
-        <Link to="/advisory">Advisory</Link>
-        <Link to="/watch-list">Watch List</Link>
-        <Link to="/user-usermanagement">User Management</Link>
-        <Link to="/profile">Profile</Link>
       </nav>
       </div>
     </div>
