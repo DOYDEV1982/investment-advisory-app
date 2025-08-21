@@ -1,4 +1,5 @@
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import '../AdvisoryPage.css';
 
 const AdvisoryPage = () => {
@@ -12,6 +13,7 @@ const AdvisoryPage = () => {
         </p>
         <button className="advisory-btn">Get My Advice</button>
       </div>
+      <Footer />
     </>
   );
 };

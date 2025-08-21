@@ -2,14 +2,14 @@
   max-width: 900px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: #F5DEB3; /* Wheat */
+  background-color: #FFFDD0; /* Cream */
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 .user-management-container h2 {
   text-align: center;
-  color: #1E3A8A; /* Deep Navy */
+  color: #006400; /* Deep Green */
   margin-bottom: 1.5rem;
 }
 
@@ -21,7 +21,7 @@
 
 .user-management-form label {
   font-weight: bold;
-  color: #1E3A8A;
+  color: #006400; /* Deep Green */
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
@@ -43,8 +43,8 @@
 }
 
 .user-management-form button {
-  background-color: #1E3A8A; /* Deep Navy */
-  color: #F5DEB3; /* Wheat */
+  background-color: #006400; /* Deep Green */
+  color: #FFFDD0; /* Cream */
   padding: 0.8rem 1.5rem;
   border: none;
   border-radius: 6px;
@@ -56,7 +56,7 @@
 
 .user-management-form button:hover {
   background-color: #FFD700; /* Gold */
-  color: #1E3A8A;
+  color: #006400;
 }
 
 /* ✅ Responsive: Desktop */

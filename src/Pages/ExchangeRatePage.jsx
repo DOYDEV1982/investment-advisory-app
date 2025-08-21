@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import "../ExchangeRatePage.css";
 
 const ExchangeRatePage = () => {
@@ -65,6 +66,7 @@ const ExchangeRatePage = () => {
           </div>
         )}
       </div>
+      <Footer />
     </>
   );
 };

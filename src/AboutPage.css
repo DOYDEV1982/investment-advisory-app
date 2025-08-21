@@ -1,11 +1,9 @@
-
-
 .AboutPage {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #F5DEB3; /* Wheat */
+  background-color: #FFFDD0; /* Cream */
   padding: 2rem;
 }
 
@@ -21,7 +19,7 @@
 
 .about h2 {
   font-size: 2rem;
-  color: #1E3A8A; /* Deep Navy */
+  color: #006400; /* Deep Green */
   margin-bottom: 1rem;
 }
 
@@ -34,8 +32,8 @@
 
 /* Contact Button */
 .button .btn-black {
-  background-color: #1E3A8A; /* Deep Navy */
-  color: #F5DEB3; /* Wheat */
+  background-color: #006400; /* Deep Green */
+  color: #FFFDD0; /* Cream */
   padding: 0.9rem 2rem;
   border: none;
   border-radius: 6px;
@@ -47,7 +45,7 @@
 
 .button .btn-black:hover {
   background-color: #FFD700; /* Gold Hover */
-  color: #1E3A8A;
+  color: #006400;
 }
 
 /* ✅ Responsive for tablets and desktops */
@@ -90,10 +88,11 @@
     font-size: 1rem;
   }
 }
+
 .button .btn-black {
   display: inline-block;
-  background-color: #1E3A8A; /* Deep Navy */
-  color: #F5DEB3; /* Wheat */
+  background-color: #006400; /* Deep Green */
+  color: #FFFDD0; /* Cream */
   padding: 0.9rem 2rem;
   border-radius: 6px;
   font-size: 1.1rem;
@@ -104,5 +103,5 @@
 
 .button .btn-black:hover {
   background-color: #FFD700; /* Gold Hover */
-  color: #1E3A8A;
+  color: #006400;
 }

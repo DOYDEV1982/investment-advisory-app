@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import { Line } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -78,10 +80,14 @@ const MarketDataPage = () => {
   if (isError) return <p>Error loading market data.</p>;
 
   return (
+    <>
+    <Navbar />
     <div style={{ width: "80%", margin: "auto", padding: "20px" }}>
       <h2>Market Data</h2>
       <Line data={chartData} />
     </div>
+    <Footer />
+    </>
   );
 };
 

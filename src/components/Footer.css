@@ -1,7 +1,7 @@
 /* Footer container */
 .copy {
-  background-color: #1e3a8a; /* Deep Navy */
-  color: #f5deb3; /* Wheat */
+  background-color: #006400; /* Deep Green */
+  color: #FFFDD0; /* Cream */
   text-align: center;
   padding: 1.5rem 1rem;
   font-size: 0.9rem;
@@ -18,14 +18,14 @@
 }
 
 .socialmedia a {
-  color: #f5deb3; /* Wheat */
+  color: #FFFDD0; /* Cream */
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
 }
 
 .socialmedia a:hover {
-  color: #ffdd57; /* Accent Yellow for hover effect */
+  color: #FFD700; /* Golden Yellow for hover effect */
   text-decoration: underline;
 }
 

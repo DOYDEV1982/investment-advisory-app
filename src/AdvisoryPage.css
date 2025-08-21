@@ -2,14 +2,14 @@
   max-width: 900px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: #F5DEB3; /* Wheat */
+  background-color: #FFFDD0; /* Cream */
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   text-align: center;
 }
 
 .advisory h2 {
-  color: #1E3A8A; /* Deep Navy */
+  color: #006400; /* Deep Green */
   font-size: 2rem;
   margin-bottom: 1rem;
 }
@@ -23,8 +23,8 @@
 
 /* CTA Button */
 .advisory-btn {
-  background-color: #1E3A8A; /* Deep Navy */
-  color: #F5DEB3; /* Wheat */
+  background-color: #006400; /* Deep Green */
+  color: #FFFDD0; /* Cream */
   padding: 0.9rem 2rem;
   border: none;
   border-radius: 6px;
@@ -35,8 +35,8 @@
 }
 
 .advisory-btn:hover {
-  background-color: #FFD700; /* Gold Hover */
-  color: #1E3A8A;
+  background-color: #004d00; /* Darker Deep Green Hover */
+  color: #FFFDD0;
 }
 
 /* ✅ Large screens */

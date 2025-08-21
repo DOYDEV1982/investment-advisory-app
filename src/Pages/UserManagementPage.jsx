@@ -1,4 +1,5 @@
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import '../UserManagementPage.css';
 
 const UserManagementPage = () => {
@@ -44,6 +45,7 @@ const UserManagementPage = () => {
           <button type="submit">Save User</button>
         </form>
       </div>
+      <Footer />
     </>
   );
 };

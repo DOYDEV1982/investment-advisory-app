@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { Line } from "react-chartjs-2";
 import {
@@ -171,6 +172,7 @@ const AnalyticsPage = () => {
           </>
         )}
       </div>
+     <Footer />
     </>
   );
 };

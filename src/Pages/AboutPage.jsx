@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar'
-import { Link } from 'react-router-dom';   // ✅ Import Link
+import { Link } from 'react-router-dom';  
+import Footer from '../components/Footer'
 import '../AboutPage.css'
 
 const AboutPage = () => {
@@ -21,6 +22,7 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
+    <Footer />
     </>
   );
 };
