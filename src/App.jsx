@@ -7,7 +7,7 @@ import ExchangeRatePage from './Pages/ExchangeRatePage'
 import MarketDataPage from './Pages/MarketDataPage'
 import AdvisoryPage from './Pages/AdvisoryPage'
 import WatchListPage from './Pages/WatchlistPage'
-import UserManagementPage from './Pages/UserManagementPage'
+import LiveMarketChartPage from './Pages/LiveMarketChartPage'
 import ProfilePage from './Pages/ProfilePage'
 
 function App()  {
@@ -23,7 +23,7 @@ function App()  {
             <Route path="/market-data" element={<MarketDataPage />} />
             <Route path="/advisory" element={<AdvisoryPage />} /> 
             <Route path="/watch-list" element={<WatchListPage />} />
-            <Route path="/user-usermanagement" element={<UserManagementPage />} />
+            <Route path="/livemarketchart" element={<LiveMarketChartPage />} />
             <Route path="/profile" element={<ProfilePage />} />
             
           </Routes>
