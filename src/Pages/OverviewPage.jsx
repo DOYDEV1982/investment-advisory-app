@@ -201,82 +201,57 @@ useEffect(() => {
 
   if (isLoading) return <p>Loading stock overview...</p>;
 
-  return (
-    <>
-      <Navbar />
-      <div style={{ width: "95%", margin: "auto", padding: "20px" }}>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "20px",
-          }}
-        >
-          {/* Stock Section */}
-          <div
-            style={{
-              padding: "20px",
-              backgroundColor: "#FFFDD0",
-              borderRadius: "10px",
-            }}
-          >
-            <h2 style={{ color: "#006400" }}>📊 Stock Market Overview</h2>
-            <p>
-              <strong>Current Value:</strong> ${currentValue}
-            </p>
-            <p>
-              <strong>Withdrawable Cash:</strong> ${withdrawableCash}
-            </p>
-            <div style={{ marginBottom: "15px" }}>
-              <button onClick={() => setDays(5)}>5 Days</button>
-              <button onClick={() => setDays(10)}>10 Days</button>
-              <button onClick={() => setDays(20)}>20 Days</button>
-            </div>
-            {chartData && <Line data={chartData} />}
-          </div>
-
-          {/* Crypto Section */}
-          <div
-            style={{
-              padding: "20px",
-              backgroundColor: "#E6FFFA",
-              borderRadius: "10px",
-            }}
-          >
-            <h2 style={{ color: "#006400" }}>💹 Crypto Market Overview</h2>
-            <p>
-              <strong>Current {selectedCrypto.toUpperCase()} Price:</strong> $
-              {currentCryptoPrice}
-            </p>
-            <p>
-              <strong>% Change ({days} days):</strong>{" "}
-              <span style={{ color: cryptoChange >= 0 ? "green" : "red" }}>
-                {cryptoChange}%
-              </span>
-            </p>
-            <select
-              value={selectedCrypto}
-              onChange={(e) => setSelectedCrypto(e.target.value)}
-              style={{ marginBottom: "15px", padding: "8px", borderRadius: "5px" }}
-            >
-              <option value="bitcoin">Bitcoin (BTC)</option>
-              <option value="ethereum">Ethereum (ETH)</option>
-              <option value="binancecoin">Binance Coin (BNB)</option>
-              <option value="solana">Solana (SOL)</option>
-              <option value="ripple">XRP</option>
-              <option value="cardano">Cardano (ADA)</option>
-              <option value="dogecoin">Dogecoin (DOGE)</option>
-              <option value="polkadot">Polkadot (DOT)</option>
-              <option value="tron">Tron (TRX)</option>
-              <option value="matic-network">Polygon (MATIC)</option>
-            </select>
-            {cryptoData && <Line data={cryptoData} />}
-          </div>
+ return (
+  <>
+    <Navbar />
+    <div className="overview-container">
+      {/* Stock Section */}
+      <div className="chart-card stock-card">
+        <h2 style={{ color: "#006400" }}>📊 Stock Market Overview</h2>
+        <p><strong>Current Value:</strong> ${currentValue}</p>
+        <p><strong>Withdrawable Cash:</strong> ${withdrawableCash}</p>
+        <div style={{ marginBottom: "15px" }}>
+          <button onClick={() => setDays(5)}>5 Days</button>
+          <button onClick={() => setDays(10)}>10 Days</button>
+          <button onClick={() => setDays(20)}>20 Days</button>
         </div>
+        {chartData && <Line data={chartData} />}
       </div>
-      <Footer />
-    </>
+
+      {/* Crypto Section */}
+      <div className="chart-card crypto-card">
+        <h2 style={{ color: "#006400" }}>💹 Crypto Market Overview</h2>
+        <p>
+          <strong>Current {selectedCrypto.toUpperCase()} Price:</strong> ${currentCryptoPrice}
+        </p>
+        <p>
+          <strong>% Change ({days} days):</strong>{" "}
+          <span style={{ color: cryptoChange >= 0 ? "green" : "red" }}>
+            {cryptoChange}%
+          </span>
+        </p>
+        <select
+          value={selectedCrypto}
+          onChange={(e) => setSelectedCrypto(e.target.value)}
+          style={{ marginBottom: "15px", padding: "8px", borderRadius: "5px" }}
+        >
+          <option value="bitcoin">Bitcoin (BTC)</option>
+          <option value="ethereum">Ethereum (ETH)</option>
+          <option value="binancecoin">Binance Coin (BNB)</option>
+          <option value="solana">Solana (SOL)</option>
+          <option value="ripple">XRP</option>
+          <option value="cardano">Cardano (ADA)</option>
+          <option value="dogecoin">Dogecoin (DOGE)</option>
+          <option value="polkadot">Polkadot (DOT)</option>
+          <option value="tron">Tron (TRX)</option>
+          <option value="matic-network">Polygon (MATIC)</option>
+        </select>
+        {cryptoData && <Line data={cryptoData} />}
+      </div>
+    </div>
+    <Footer />
+  </>
   );
 };
 
-export default OverviewPage;
+export default OverviewPage;   

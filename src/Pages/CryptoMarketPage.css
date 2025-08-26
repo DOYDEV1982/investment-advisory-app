@@ -1,0 +1,38 @@
+.timeframe-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  background: #fff; /* keep background clean */
+  padding: 0.5rem;
+  position: sticky;
+  top: 0; /* sticks to top of the page */
+  z-index: 1000; /* ensures it stays above chart */
+  border-bottom: 1px solid #eee;
+}
+
+.timeframe-buttons button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #1976d2;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.timeframe-buttons button:hover {
+  background: #145ca4;
+}
+
+@media (max-width: 768px) {
+  .timeframe-buttons {
+    flex-wrap: wrap; /* buttons move to new line if too many */
+    gap: 0.3rem;
+  }
+
+  .timeframe-buttons button {
+    flex: 1 1 30%; /* responsive buttons */
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,31 @@
+/* OverviewPage.css */
+.overview-container {
+  width: 95%;
+  margin: auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns on big screens */
+  gap: 20px;
+}
+
+/* 📱 Small screens: stack charts vertically */
+@media (max-width: 768px) {
+  .overview-container {
+    grid-template-columns: 1fr; /* Single column */
+  }
+}
+
+.chart-card {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Stock chart background */
+.stock-card {
+  background-color: #FFFDD0;
+}
+
+/* Crypto chart background */
+.crypto-card {
+  background-color: #E6FFFA;
+}
