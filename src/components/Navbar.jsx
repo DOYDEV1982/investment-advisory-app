@@ -20,7 +20,8 @@ const Navbar = () => {
         <Link to="/admin">Admin</Link>
         <Link to="/about">About</Link>
         <Link to="/analytics">Analytics</Link>
-        <Link to="/livemarketchart">LiveMarketChart</Link>
+        <Link to="/stockmarket">StockMarket</Link>
+        <Link to="/cryptomarket">CryptoMarket</Link>
       </nav>
       </div>
     </div>

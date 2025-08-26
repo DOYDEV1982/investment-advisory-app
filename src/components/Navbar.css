@@ -8,12 +8,20 @@
 
 .Logo img {
   height: 200px;
+  width: auto;
+  filter: brightness(0) invert(1);  
+  /* 🔹 Makes logo white so it matches dark navbars */
+}
+
+.NavUp.light .Logo img {
+  filter: none; /* original color */
 }
 
 .navbar-title {
   color: #FFFDD0; /* Cream */
   font-size: 1.5rem;
   font-weight: bold;
+  
 }
 
 .navbar-nav {

@@ -7,7 +7,8 @@ import ExchangeRatePage from './Pages/ExchangeRatePage'
 import MarketDataPage from './Pages/MarketDataPage'
 import AdvisoryPage from './Pages/AdvisoryPage'
 import WatchListPage from './Pages/WatchlistPage'
-import LiveMarketChartPage from './Pages/LiveMarketChartPage'
+import StockMarketPage from './Pages/StockMarketPage'
+import CryptoMarketPage from './Pages/CryptoMarketPage'
 import ProfilePage from './Pages/ProfilePage'
 
 function App()  {
@@ -23,7 +24,8 @@ function App()  {
             <Route path="/market-data" element={<MarketDataPage />} />
             <Route path="/advisory" element={<AdvisoryPage />} /> 
             <Route path="/watch-list" element={<WatchListPage />} />
-            <Route path="/livemarketchart" element={<LiveMarketChartPage />} />
+            <Route path="/stockmarket" element={<StockMarketPage />} />
+             <Route path="/cryptomarket" element={<CryptoMarketPage />} />
             <Route path="/profile" element={<ProfilePage />} />
             
           </Routes>
